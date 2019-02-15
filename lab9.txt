@@ -1,0 +1,15 @@
+LAB 9
+
+Blocul Assemble este folosit pentru sincronizarea tranzactiilor
+assemble a -> a = nr de tranzactii sincronizate
+Blocul assemble functioneaza similar cu gather, dar doar prima tranzactie care a ajuns la assemble va merge mai departe. Restul  vor primi 'terminate 0'.
+
+Blocul Match este folosit pentru sincronizarea a 2 tranzactii. Forma generala este " a match b", unde a si b sunt etichete si sunt obligatorii. In momentul in care o tranzactie ajunge la 'a match b' , se blocheaza si asteapta pana cand o alta tranzactie din aceeasi familie ajunge la blocul match conjugat.
+
+
+Pasii nostri : 
+	Ce reprezinta o tranzactie in modelul nostru ? 
+	Facem modelul 
+	Ne asiguram ca modelul se termina cand trebuie 
+	Masuram ce trebuie sa masuram
+

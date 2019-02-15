@@ -1,0 +1,37 @@
+***select este folosit pt a alege coada cu lungimea cea mai mica (cele mai putine obiecte in asteptare)
+forma generala : select 0 a,b,c,d,e,f
+	- o = operator  conditional/logic (in cazul nostru : min)
+	- a = numele/numarul unui parametru care va primi valoarea selectata
+	- b si  c reperezinta intervalul din care sunt luate entitattile care se teesteaza
+	- d este o valoare de refernta pentru operandul e (in cazul nostru nu va exista)
+	- e este tipul de enitate (in cazul nostru, va fi litera q)
+	- f este eticheta unui bloc la care este transmisa tranzactia in cazul in cazre nu a putut fi selectata nicio valoare
+
+ex : 
+	select min param,1,20,,q
+	queue p$param
+	seize p$param
+	depart p$param
+	; orice 
+	release p$param
+
+***transfer both,b,c 
+
+	- b si c sunt etichete de bloc si o tranzactie ajunsa  la un astfel de bloc "transfer" va fi trimisa la blocul cu eticheta b sau blocul cu eticheta c astfel incat durata de asteptare pentru a intra in acel bloc sa fie minima
+	- in cazul in care durata e asteptare pentru b si c este egala , va fi trimisa la b
+
+ex : In cazul urmator, daca tag1 este cat de putin ocupat, 'transfer' va duce la tag2, pentru ca pentru blocul "advance" nu se asteapta deloc
+
+	transfer both, tag1, tag2
+
+	tag1 seize 1
+
+------------------------------
+
+	tag2 advance 30
+
+
+
+*********************************************
+Great big reference 
+http://www.minutemansoftware.com/reference/reference_manual.htm

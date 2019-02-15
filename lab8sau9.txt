@@ -1,0 +1,5 @@
+Initial A,B
+	- specifica o valoare initiala pentru un savevalue
+
+initial x$nume, 2
+- se executa o singura data, la inceputul programlui, indiferent de pozitia sa in cod

@@ -1,0 +1,17 @@
+goo.gl/NHBcCg
+savevalue a,b
+a = numele sau numarul entitatii savevalue si este obligatoriu. El poate fi urmat de semnul plus sau minus.
+b = valoarea memorata adunata sau scazuta din entitatea saveValue si este obligatorie pentru a citi valoarea stocata intr-o entitatea savevalue folosim x$nume sau xNumar (in functie de a)
+Lipsa operatorilor - sau + fac atribuire entitatii
+
+O entitate savevalue este comuna tuturor tranzactiilor. daca stocam o valoare cu o tranzactie ea va putea fi citita, suprascrisa, modificiata de orice tranzactie.
+
+In GPSS, operatorul pentru inmultire.
+
+
+Tranzactii : 
+ - lotul de 60 de ceasuri
+ -  cererile clientilor
+
+Facilitati : 
+ - impachetare
